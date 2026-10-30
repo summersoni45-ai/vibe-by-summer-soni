@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09051f">
+<title>Vibe by Summer Soni</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(ellipse at 15% 15%,#381078 0,transparent 36%),radial-gradient(ellipse at 90% 80%,#063a82 0,transparent 34%),linear-gradient(145deg,#08051c,#10052e 55%,#030a20);display:flex;align-items:center;justify-content:center;padding:24px;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;width:340px;height:340px;border:1px solid #7a22ff66;border-radius:50%;filter:blur(2px);pointer-events:none}body:before{top:-230px;left:-140px;box-shadow:0 0 60px #791cff55}body:after{bottom:-250px;right:-130px;box-shadow:0 0 70px #00aaff55}
+main{width:min(100%,430px);text-align:center;position:relative;z-index:1;padding:24px 8px}
+.logo{font-size:clamp(58px,16vw,82px);font-weight:850;letter-spacing:-5px;line-height:1;background:linear-gradient(115deg,#e13bff 8%,#7955ff 48%,#00cfff 90%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 35px #762bff55}
+.crown{font-size:25px;color:#ed8cff;margin-bottom:4px}.byline{font-family:Georgia,serif;font-style:italic;font-size:25px;color:#d8a1ff;margin-top:8px}
+.tag{color:#b8b4ff;font-size:13px;letter-spacing:1px;margin:25px 0 52px}
+h1{font-size:30px;margin:0 0 12px}p{color:#bcb9ef;line-height:1.6;margin:0 auto 28px;max-width:330px}
+button{border:0;border-radius:999px;width:100%;padding:16px 20px;color:white;font-weight:750;font-size:17px;background:linear-gradient(100deg,#a000ff,#424dff,#00bfff);box-shadow:0 8px 28px #5728ff66;cursor:pointer}
+.login{margin-top:22px;color:#c7c4f6;font-size:14px}.login a{color:#13c7ff;text-decoration:none;font-weight:700;margin-left:6px}
+.legal{font-size:11px;color:#9691cb;margin-top:35px}.legal a{color:#45baff}
+.foot{margin-top:42px;color:#d58cff;font-family:Georgia,serif;font-style:italic;font-size:21px}
+#notice{display:none;margin-top:20px;padding:14px;border:1px solid #7545ff;border-radius:14px;background:#160d3b;color:#d8d4ff;font-size:13px}
+</style>
+</head>
+<body>
+<main>
+  <div class="crown">♕</div>
+  <div class="logo">Vibe</div>
+  <div class="byline">by Summer Soni</div>
+  <div class="tag">REAL PEOPLE&nbsp; • &nbsp;REAL VIBES&nbsp; • &nbsp;YOUR SPACE</div>
+  <h1>Welcome to <span style="color:#27baff">Vibe</span></h1>
+  <p>Share your world. Discover new vibes.<br>Connect with real people.</p>
+  <button id="start">Get Started&nbsp; →</button>
+  <div class="login">Already have an account? <a href="#" id="login">Log in</a></div>
+  <div class="legal">By continuing, you agree to our<br><a href="#" id="privacy">Privacy Policy</a> and <a href="#" id="guidelines">Community Guidelines</a>.</div>
+  <div class="foot">Vibe by Summer Soni ♡</div>
+  <div id="notice" role="status"></div>
+</main>
+<script>
+const notice=document.getElementById('notice');
+function show(message){notice.textContent=message;notice.style.display='block'}
+document.getElementById('start').addEventListener('click',()=>show('Welcome! This is the first-screen preview. Account creation will be added after secure sign-in and database setup.'));
+document.getElementById('login').addEventListener('click',e=>{e.preventDefault();show('Login will be connected when the secure account system is set up.')});
+document.getElementById('privacy').addEventListener('click',e=>{e.preventDefault();show('Privacy information will be published before inviting testers.')});
+document.getElementById('guidelines').addEventListener('click',e=>{e.preventDefault();show('Community guidelines will be available before inviting testers.')});
+</script>
+</body></html>
